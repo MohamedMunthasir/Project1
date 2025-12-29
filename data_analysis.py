@@ -37,6 +37,15 @@ def summary_table(df: pd.DataFrame, sample_rows: Optional[int] = None) -> pd.Dat
 
     return pd.DataFrame(rows)
 
+# Add to data_analysis.py
+def get_correlation_matrix(df: pd.DataFrame) -> pd.DataFrame:
+    """Get correlation matrix for numeric columns"""
+    numeric_df = df.select_dtypes(include=[np.number])
+    if numeric_df.shape[1] < 2:
+        return pd.DataFrame()
+    return numeric_df.corr()
+
+
 
 def print_summary(df: pd.DataFrame, sample_rows: Optional[int] = None):
     s = summary_table(df, sample_rows)

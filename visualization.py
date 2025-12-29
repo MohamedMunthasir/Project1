@@ -184,3 +184,27 @@ class DataVisualization:
                 self.boxplot(cols[0], cols[1])
         else:
             self.multivariate_analysis()
+
+    # Add to DataVisualization class in visualization.py
+
+def missing_data_heatmap(self):
+    """Visualize missing data patterns"""
+    import numpy as np
+    
+    plt.figure(figsize=(12, 8))
+    
+    # Create binary matrix: 1 for missing, 0 for present
+    missing_matrix = self.data.isna().astype(int)
+    
+    if missing_matrix.sum().sum() == 0:
+        print("No missing data to visualize")
+        return
+    
+    sns.heatmap(missing_matrix, cbar=True, yticklabels=False, 
+                cmap='YlOrRd', cbar_kws={'label': 'Missing Data'})
+    plt.title('Missing Data Heatmap')
+    plt.xlabel('Columns')
+    plt.ylabel('Rows')
+    plt.tight_layout()
+    plt.show()
+
