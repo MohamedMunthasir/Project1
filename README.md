@@ -1,8 +1,8 @@
-# 🚀 Visualization-Aided Data Preprocessor (CLI)
+# 🚀 Cloud Data Preprocessor
 
 **Simplify Data Preprocessing — Now with Visual Power!**
 
-Welcome to the **Visualization-Aided Data Preprocessor (CLI)** — a command-line tool designed to make data preprocessing and visualization effortless, fast, and interactive.  
+Welcome to the **Cloud Data Preprocessor** — a command-line tool designed to make data preprocessing and visualization effortless, fast, and interactive.  
 This project aims to bring the flexibility of **Python data science workflows** straight to your **terminal**, allowing you to clean, transform, and visualize datasets without writing a single line of code.
 
 ---
